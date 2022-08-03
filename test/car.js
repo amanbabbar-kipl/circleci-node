@@ -1,7 +1,7 @@
 //Require the dev-dependencies
 let chai = require('chai');
 let chaiHttp = require('chai-http');
-let server = require('./index');
+let server = require('../index.js');
 let should = chai.should();
 
 
