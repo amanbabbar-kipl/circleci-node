@@ -19,7 +19,7 @@ jobs:
           command: "npm ci"
       - run:
           name: "Run tests"
-          command: "npm run test"
+          command: "npm test"
   say-hello:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
@@ -32,6 +32,13 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+    fb-hello:
+      docker:
+        - image: cimg/base:stable
+      steps:
+        -run:
+          name: "FB test job"
+          command: "echo Hello From FB"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
@@ -42,3 +49,7 @@ workflows:
       - say-hello:
           requires:
             - test-app
+      - fb-hello:
+          filters:
+            branches:
+              only: /^feature\/.*$/
