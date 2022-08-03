@@ -39,7 +39,7 @@ jobs:
       - checkout
       - run:
           name: "FB test job"
-          command: "echo Hello From FB"
+          command: "echo Hello From Branch: ${CIRCLE_BRANCH}"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
