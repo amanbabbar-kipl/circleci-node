@@ -39,4 +39,6 @@ workflows:
   test-app:
     jobs:
       - test-app
-      - say-hello
+      - say-hello:
+          requires:
+            - test-app
