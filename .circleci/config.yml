@@ -36,6 +36,7 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
+      - checkout
       -run:
         name: "FB test job"
         command: "echo Hello From FB"
