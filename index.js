@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/car', (req, res) => {
-    res.json({cars});
+    res.json({car:cars});
 });
 
 app.listen(port, () => {
