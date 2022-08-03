@@ -19,10 +19,12 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 });
 
-app.get('/cars', (req, res) => {
+app.get('/car', (req, res) => {
     res.json({cars});
 });
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 });
+
+module.exports = app; // for testing
