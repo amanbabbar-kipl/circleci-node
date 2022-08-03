@@ -37,9 +37,9 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      -run:
-        name: "FB test job"
-        command: "echo Hello From FB"
+      - run:
+          name: "FB test job"
+          command: "echo Hello From FB"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
